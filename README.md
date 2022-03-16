@@ -2,7 +2,7 @@
 
 > Now with less bugs!
 
-## Prerequisites
+## 0. Prerequisites
 
 > Ubuntu (why would you use anything else? 💁🏽‍♂️)
 
@@ -39,7 +39,7 @@ Adjut ```--gpu``` to each local device id. Good luck. It's a pain.
 
 ---
 
-## Install PoW Worker
+## 1. Install PoW Worker
 
 ```bash
 git clone https://github.com/nanocurrency/nano-work-server.git
@@ -47,7 +47,7 @@ cd nano-work-server
 cargo build --release
 ```
 
-## Install HTTP Proxy
+## 2. Install HTTP Proxy
 
 ```bash
 git clone https://github.com/fwd/nano-proxy
