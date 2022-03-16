@@ -17,6 +17,8 @@ node index
 nano .env
 ```
 
+Paste configs from below.
+
 **Required:**
 ```
 NAME=Esteban's GPU 💪🏽
