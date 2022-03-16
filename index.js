@@ -46,8 +46,8 @@ proxy.add([
 		action: (req) => {
 			return new Promise(async (resolve, reject) => {
 
-				var account = req.query.address || req.body.account
-				var frontier = req.query.frontier || req.body.frontier
+				var account = req.query.address || req.query.account
+				var frontier = req.query.frontier || req.query.frontier
 
 				if (!frontier && !account) {
 					resolve( { error: "Missing frontier or account" } )
