@@ -55,10 +55,9 @@ cargo build --release
 git clone https://github.com/fwd/nano-proxy
 cd nano-proxy
 npm install
-node index
 ```
 
-### 3. Setup
+### 3. Setup config
 
 ```bash
 nano .env
