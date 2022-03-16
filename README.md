@@ -2,7 +2,7 @@
 
 > Now with less bugs!
 
-## 0. Prerequisites
+## 0. Pre-requisites
 
 > Ubuntu (why would you use anything else? 💁🏽‍♂️)
 
