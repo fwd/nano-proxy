@@ -8,29 +8,21 @@
 > Ubuntu (why would you use anything else? 💁🏽‍♂️)
 
 
-**1.1 OpenCL**
-
 ```bash
+# OpenCL
 sudo apt install ocl-icd-opencl-dev 
-```
 
-**1.2 Rust**
-
-```bash
+# Rust
 curl https://sh.rustup.rs -sSf | sh
-```
 
-**1.3 GCC**
-```bash
+# GCC
 sudo apt install gcc -y
-```
 
-**1.4 Nano Vanity**
-```bash
+# Nano Vanity
 cargo install nano-vanity
 ```
 
-**1.5 Cron**
+**Setup Cron**
 
 ```bash
 # crontab -e
