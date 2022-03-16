@@ -3,7 +3,7 @@
 > Now with less bugs!
 
 
-### 0. Software Needed
+## Prerequisites
 
 ```bash
 
@@ -39,7 +39,7 @@ Adjut ```--cpu-threads``` to your needs.
 
 Adjut ```--gpu``` to each local device id. Good luck. It's a pain.
 
-### 1. Install
+## Install Proxy
 
 ```bash
 git clone https://github.com/fwd/nano-proxy
