@@ -76,8 +76,14 @@ PAYMENT=YOUR_NANO_ADDRESS
 ```bash
 PORT=
 VANITY_PATH=
-GPU=0:0
+GPU=TRUE
+SECRET=joe-mama
 ```
+
+**PORT**: Can be an number between 1000 - 9999
+**VANITY_PATH**: Path to where you installed Nano Vanity, if it's not working out of the box.
+**GPU**: Enable GPU. Make sure the Worker is running in the background.
+**SECRET**: Lock communication between your node and First Nano Bank. 
 
 ### 3. Run
 
