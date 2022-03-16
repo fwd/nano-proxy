@@ -66,7 +66,7 @@ proxy.add([
 
 				_job.difficulty = req.query.difficulty || 'fffffff800000000'
 
-				var proof = (await proxy.server.http.post('http://127.0.0.1:7076', _job)).data
+				var proof = (await proxy.server.http.post('http://[::1]:7076', _job)).data
 
 				resolve( proof )
 			
