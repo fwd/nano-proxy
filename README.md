@@ -2,7 +2,6 @@
 
 > Now with less bugs!
 
-
 ## Prerequisites
 
 > Ubuntu (why would you use anything else? 💁🏽‍♂️)
@@ -70,7 +69,7 @@ NAME=Esteban's GPU 💪🏽
 PAYMENT=YOUR_NANO_ADDRESS
 ```
 
-**Optional**
+**Optional:**
 
 ```bash
 PORT=
