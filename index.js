@@ -11,14 +11,6 @@ const payment = process.env.PAYMENT || false
 const permit_interval = process.env.PERMIT_CHECK || false
 const nano_vanity_path = process.env.VANITY_PATH || '~/.cargo/bin/nano-vanity'
 
-// 1. sudo apt install ocl-icd-opencl-dev
-// 2. curl https://sh.rustup.rs -sSf | sh
-// 3. sudo apt install gcc -y
-
-// cargo install nano-vanity
-
-// ~/nano-work-server/target/release/nano-work-server --cpu-threads 2
-
 proxy.add([
 	{
 		method: 'get',
