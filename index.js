@@ -51,6 +51,7 @@ proxy.add([
 
 				var account = req.query.address || req.query.account
 				var frontier = req.query.frontier || req.query.frontier
+				var note = req.query.note
 
 				if (!frontier && !account) {
 					resolve( { error: "Missing frontier or account" } )
@@ -67,7 +68,12 @@ proxy.add([
 					delete _job.hash
 				}
 
-				_job.difficulty = req.query.difficulty || 'fffffff800000000'
+				var default_difficulty = 'fffffff800000000' // All (takes longer)
+
+				// https://docs.nano.org/integration-guides/work-generation
+				if (note === "receive") default_difficulty = "fffffe0000000000" // Receive (takes less time)
+
+				_job.difficulty = req.query.difficulty || default_difficulty
 
 				var proof = (await proxy.server.http.post('http://[::1]:7076', _job)).data
 
