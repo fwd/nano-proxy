@@ -2,6 +2,7 @@ const _ = require('lodash')
 const proxy = require('@fwd/api')
 
 const gpu = false
+const port = 25565
 
 // 1. sudo apt install ocl-icd-opencl-dev
 // 2. curl https://sh.rustup.rs -sSf | sh
@@ -79,4 +80,4 @@ proxy.use((req, res, next) => {
 	next()	
 })
 
-proxy.start(3819, __dirname)
+proxy.start(port, __dirname)
