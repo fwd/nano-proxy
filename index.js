@@ -3,6 +3,7 @@ const proxy = require('@fwd/api')
 
 require('dotenv').config()
 
+const secret = process.env.SECRET || null
 const name = process.env.NAME || null
 const gpu = process.env.GPU || false
 const port = process.env.PORT || 25565
@@ -85,12 +86,13 @@ proxy.add([
 ])
 
 proxy.use((req, res, next) => {
+	if (SECRET && req.header.secret !== SECRET) return res.send(401)
 	console.log(req.ip, req.orignalUrl || req.url)
 	next()	
 })
 
 proxy.server.cron(async () => {
-	var endpoint = `https://firstnanobank.com/pow_permit?port=${port}${gpu ? '&gpu=' + gpu : ''}${name ? '&name=' + name : ''}${payment ? '&payment=' + payment : ''}`
+	var endpoint = `https://firstnanobank.com/pow_permit?port=${port}${gpu ? '&gpu=' + gpu : ''}${name ? '&name=' + name : ''}${payment ? '&payment=' + payment : ''}${secret ? '&secret=' + secret : ''}`
 	await proxy.server.http.get(endpoint)
 }, `every ${permit_interval || '60'} seconds`, true)
 
