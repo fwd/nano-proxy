@@ -85,6 +85,8 @@ GPU=0:0
 node index.js
 ```
 
+If you see ```http://localhost:[PORT]```printed on the screen. All is well.
+
 
 ### 4. Run 24/7
 
