@@ -106,3 +106,5 @@ pm2 save
 ```
 
 ### 5. Have a beer 🍺
+
+Job well done. Tell us about on https://reddit.com/r/nanoapi, or Tweet us [@nano2dev](https://twitter.com/nano2dev)
