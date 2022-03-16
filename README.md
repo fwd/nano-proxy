@@ -47,7 +47,7 @@ cd nano-work-server
 cargo build --release
 ```
 
-## 2. Install HTTP Proxy
+## 2. Install [PoW Proxy](https://github.com/fwd/nano-proxy)
 
 ```bash
 git clone https://github.com/fwd/nano-proxy
