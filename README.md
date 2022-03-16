@@ -104,3 +104,5 @@ pm2 start index.js --name nano-proxy
 pm2 startup
 pm2 save
 ```
+
+### 5. Have a beer 🍺
