@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
-    "@fwd/api": "github:fwd/api"
+    "@fwd/api": "github:fwd/api",
+    "dotenv": "^16.0.0"
   }
 }

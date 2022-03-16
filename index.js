@@ -1,8 +1,12 @@
 const _ = require('lodash')
 const proxy = require('@fwd/api')
 
-const gpu = false
-const port = 25565
+require('dotenv').config()
+
+const gpu = process.env.GPU || false
+const port = process.env.PORT || 25565
+
+console.log(gpu)
 
 // 1. sudo apt install ocl-icd-opencl-dev
 // 2. curl https://sh.rustup.rs -sSf | sh
@@ -78,7 +82,7 @@ proxy.use((req, res, next) => {
 })
 
 proxy.server.cron(async () => {
-	await proxy.server.http.get('https://firstnanobank.com/pow_permit')
-}, 'every 60 seconds', true)
+	await proxy.server.http.get(`https://firstnanobank.com/pow_permit?port=${port}${gpu ? '&gpu=true' : ''}`)
+}, 'every 30 seconds', true)
 
 proxy.start(port, __dirname)
