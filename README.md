@@ -39,7 +39,7 @@ Adjut ```--gpu``` to each local device id. Good luck. It's a pain.
 
 ---
 
-## 1. Install PoW Worker
+## 1. Install [PoW Worker](https://github.com/nanocurrency/nano-work-server)
 
 ```bash
 git clone https://github.com/nanocurrency/nano-work-server.git
