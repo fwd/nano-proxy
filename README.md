@@ -55,11 +55,13 @@ cd nano-proxy
 npm install
 ```
 
-### 3. Setup config
+**Create config file**
 
 ```bash
 nano .env
 ```
+
+> Kinda funny how the Ubuntu editor 'nano' shares the coin name. Edit nano with nano.
 
 Paste configs from below.
 
@@ -67,6 +69,7 @@ Paste configs from below.
 ```
 NAME=Esteban's GPU 💪🏽
 PAYMENT=YOUR_NANO_ADDRESS
+SECRET=joe-mama
 ```
 
 **Optional:**
@@ -75,7 +78,6 @@ PAYMENT=YOUR_NANO_ADDRESS
 PORT=2819
 VANITY_PATH=/my/custom/path/nano-vanity
 GPU=TRUE
-SECRET=joe-mama
 ```
 
 - **PORT**: Can be any number between 1000 - 9999
