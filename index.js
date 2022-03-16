@@ -8,8 +8,6 @@ const gpu = process.env.GPU || false
 const port = process.env.PORT || 25565
 const nano_vanity_path = process.env.VANITY_PATH || '~/.cargo/bin/nano-vanity'
 
-console.log(gpu)
-
 // 1. sudo apt install ocl-icd-opencl-dev
 // 2. curl https://sh.rustup.rs -sSf | sh
 // 3. sudo apt install gcc -y
