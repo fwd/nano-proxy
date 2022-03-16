@@ -22,12 +22,9 @@ proxy.add([
 				var count = []
 
 				for (var i in _.range(0, req.query.count || 1)) {
-					// _.range(0, req.query.count)
 					var string = req.query.string[0] == '1' ? req.query.string : '1' + req.query.string
 					if (string.length > 6) return resolve({ error: 400, message: "Too long." })
 					var output = await proxy.server.exec(`~/.cargo/bin/nano-vanity ${req.query.string} --simple-output ${gpu ? '--gpu' : ''}`)
-					// var output = await server.exec(`nano-vanity ${req.query.string} --simple-output`)
-					// var output = await server.exec(`nano-vanity ${req.query.string} --simple-output --gpu`)
 					if (output.includes('failed')) return console.log(output)
 					count.push({
 						private: output.split(' ')[0],
