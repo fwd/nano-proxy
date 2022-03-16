@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "dependencies": {
+    "@fwd/api": "github:fwd/api"
+  }
+}
