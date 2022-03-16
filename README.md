@@ -109,4 +109,4 @@ pm2 save
 
 Job well done. You'll start to see payments in about 5 minutes or so.
 
-Tell us about it on https://reddit.com/r/nanoapi, or Tweet us [@nano2dev](https://twitter.com/nano2dev)
+Post your experience on https://reddit.com/r/nanoapi, or Tweet us [@nano2dev](https://twitter.com/nano2dev)
