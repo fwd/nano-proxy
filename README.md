@@ -72,6 +72,8 @@ PAYMENT=YOUR_NANO_ADDRESS
 SECRET=joe-mama
 ```
 
+Please change the ```SECRET``` to something long, and secure.
+
 **Optional:**
 
 ```bash
