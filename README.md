@@ -107,4 +107,6 @@ pm2 save
 
 ### 5. Have a beer 🍺
 
-Job well done. Tell us about on https://reddit.com/r/nanoapi, or Tweet us [@nano2dev](https://twitter.com/nano2dev)
+Job well done. You'll start to see payments in about 5 minutes or so.
+
+Tell us about it on https://reddit.com/r/nanoapi, or Tweet us [@nano2dev](https://twitter.com/nano2dev)
