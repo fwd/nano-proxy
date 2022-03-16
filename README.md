@@ -7,6 +7,7 @@
 
 > Ubuntu (why would you use anything else? 💁🏽‍♂️)
 
+> Probably a good idea to be running everything with ```root``` access.
 
 ```bash
 # OpenCL
