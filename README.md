@@ -5,23 +5,39 @@
 
 ## Prerequisites
 
+> Ubuntu 18+ (why would you use anything else? 💁🏽‍♂️)
+
+
+**OpenCL**
+
 ```bash
-
 sudo apt install ocl-icd-opencl-dev 
-
-curl https://sh.rustup.rs -sSf | sh
-sudo apt install gcc -y
-cargo install nano-vanity
-
-git clone https://github.com/nanocurrency/nano-work-server.git
-
-cd nano-work-server
-
-cargo build --release
-
 ```
 
-Set up cron
+**Rust**
+
+```bash
+curl https://sh.rustup.rs -sSf | sh
+```
+
+**GCC**
+```bash
+sudo apt install gcc -y
+```
+
+**Nano Vanity**
+```bash
+cargo install nano-vanity
+```
+
+**Nano PoW Worker**
+```bash
+git clone https://github.com/nanocurrency/nano-work-server.git
+cd nano-work-server
+cargo build --release
+```
+
+**Cron**
 
 ```bash
 # crontab -e
@@ -30,14 +46,15 @@ Set up cron
 
 Adjut ```--cpu-threads``` to your needs.
 
-
-**For GPU**
+**With GPU**
 
 ```
 @reboot ~/nano-work-server/target/release/nano-work-server --gpu 0:0
 ```
 
 Adjut ```--gpu``` to each local device id. Good luck. It's a pain.
+
+---
 
 ## Install Proxy
 
