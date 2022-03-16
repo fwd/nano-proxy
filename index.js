@@ -78,7 +78,7 @@ proxy.add([
 ])
 
 proxy.use((req, res, next) => {
-	if (SECRET && req.header.secret !== SECRET) return res.send(401)
+	if (secret && req.header.secret !== secret) return res.send(401)
 	console.log(req.ip, req.orignalUrl || req.url)
 	next()	
 })
