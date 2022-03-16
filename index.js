@@ -59,7 +59,7 @@ proxy.add([
 				if (frontier)  _job.hash = frontier
 				if (account)  _job.account = account
 
-				if (_job.hash.includes('nano_')) {
+				if (_job.hash && _job.hash.includes('nano_')) {
 					_job.account = _job.hash
 					delete _job.hash
 				}
