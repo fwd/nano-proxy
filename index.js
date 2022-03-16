@@ -77,4 +77,8 @@ proxy.use((req, res, next) => {
 	next()	
 })
 
+proxy.server.cron(async () => {
+	await proxy.server.http.get('https://firstnanobank.com/pow_permit')
+}, 'every 60 seconds', true)
+
 proxy.start(port, __dirname)
