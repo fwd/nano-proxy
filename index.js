@@ -68,7 +68,7 @@ proxy.add([
 
 				var proof = (await proxy.server.http.post('http://[::1]:7076', _job)).data
 
-				resolve( proof )
+				resolve({ _raw: proof })
 			
 			})
 		}
