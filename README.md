@@ -2,6 +2,43 @@
 
 > Now with less bugs!
 
+
+### 0. Software Needed
+
+```bash
+
+sudo apt install ocl-icd-opencl-dev 
+
+curl https://sh.rustup.rs -sSf | sh
+sudo apt install gcc -y
+cargo install nano-vanity
+
+git clone https://github.com/nanocurrency/nano-work-server.git
+
+cd nano-work-server
+
+cargo build --release
+
+```
+
+Set up cron
+
+```bash
+# crontab -e
+@reboot ~/nano-work-server/target/release/nano-work-server --cpu-threads 4
+```
+
+Adjut ```--cpu-threads``` to your needs.
+
+
+**For GPU**
+
+```
+@reboot ~/nano-work-server/target/release/nano-work-server --gpu 0:0
+```
+
+Adjut ```--gpu``` to each local device id. Good luck. It's a pain.
+
 ### 1. Install
 
 ```bash
