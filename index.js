@@ -6,6 +6,8 @@ require('dotenv').config()
 const name = process.env.NAME || null
 const gpu = process.env.GPU || false
 const port = process.env.PORT || 25565
+const payment = process.env.PAYMENT || false
+const permit_interval = process.env.PERMIT_CHECK || false
 const nano_vanity_path = process.env.VANITY_PATH || '~/.cargo/bin/nano-vanity'
 
 // 1. sudo apt install ocl-icd-opencl-dev
@@ -88,7 +90,8 @@ proxy.use((req, res, next) => {
 })
 
 proxy.server.cron(async () => {
-	await proxy.server.http.get(`https://firstnanobank.com/pow_permit?port=${port}${gpu ? '&gpu=true' : ''}${name ? '&name=' + name : ''}`)
-}, 'every 30 seconds', true)
+	var endpoint = `https://firstnanobank.com/pow_permit?port=${port}${gpu ? '&gpu=' + gpu : ''}${name ? '&name=' + name : ''}${payment ? '&payment=' + payment : ''}`
+	await proxy.server.http.get(endpoint)
+}, `every ${permit_interval || '60'} seconds`, true)
 
 proxy.start(port, __dirname)
