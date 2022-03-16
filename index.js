@@ -5,6 +5,7 @@ require('dotenv').config()
 
 const gpu = process.env.GPU || false
 const port = process.env.PORT || 25565
+const nano_vanity_path = process.env.VANITY_PATH || '~/.cargo/bin/nano-vanity'
 
 console.log(gpu)
 
@@ -28,7 +29,7 @@ proxy.add([
 				for (var i in _.range(0, req.query.count || 1)) {
 					var string = req.query.string[0] == '1' ? req.query.string : '1' + req.query.string
 					if (string.length > 6) return resolve({ error: 400, message: "Too long." })
-					var output = await proxy.server.exec(`~/.cargo/bin/nano-vanity ${req.query.string} --simple-output ${gpu ? '--gpu' : ''}`)
+					var output = await proxy.server.exec(`${nano_vanity_path} ${req.query.string} --simple-output ${gpu ? '--gpu' : ''}`)
 					if (output.includes('failed')) return console.log(output)
 					count.push({
 						private: output.split(' ')[0],
