@@ -85,7 +85,7 @@ SECRET=joe-mama
 - **GPU**: Enable GPU. Make sure the Worker is running in the background.
 - **VANITY_PATH**: Path to where you installed Nano Vanity, if it's not working out of the box.
 
-### 3. Run
+### 3. Run it
 
 ```
 node index.js
