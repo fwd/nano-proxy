@@ -5,39 +5,32 @@
 
 ## Prerequisites
 
-> Ubuntu 18+ (why would you use anything else? 💁🏽‍♂️)
+> Ubuntu (why would you use anything else? 💁🏽‍♂️)
 
 
-**OpenCL**
+**1.1 OpenCL**
 
 ```bash
 sudo apt install ocl-icd-opencl-dev 
 ```
 
-**Rust**
+**1.2 Rust**
 
 ```bash
 curl https://sh.rustup.rs -sSf | sh
 ```
 
-**GCC**
+**1.3 GCC**
 ```bash
 sudo apt install gcc -y
 ```
 
-**Nano Vanity**
+**1.4 Nano Vanity**
 ```bash
 cargo install nano-vanity
 ```
 
-**Nano PoW Worker**
-```bash
-git clone https://github.com/nanocurrency/nano-work-server.git
-cd nano-work-server
-cargo build --release
-```
-
-**Cron**
+**1.5 Cron**
 
 ```bash
 # crontab -e
@@ -56,7 +49,15 @@ Adjut ```--gpu``` to each local device id. Good luck. It's a pain.
 
 ---
 
-## Install Proxy
+## Install PoW Worker
+
+```bash
+git clone https://github.com/nanocurrency/nano-work-server.git
+cd nano-work-server
+cargo build --release
+```
+
+## Install HTTP Proxy
 
 ```bash
 git clone https://github.com/fwd/nano-proxy
