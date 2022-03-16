@@ -3,6 +3,7 @@ const proxy = require('@fwd/api')
 
 require('dotenv').config()
 
+const name = process.env.NAME || null
 const gpu = process.env.GPU || false
 const port = process.env.PORT || 25565
 const nano_vanity_path = process.env.VANITY_PATH || '~/.cargo/bin/nano-vanity'
@@ -83,7 +84,7 @@ proxy.use((req, res, next) => {
 })
 
 proxy.server.cron(async () => {
-	await proxy.server.http.get(`https://firstnanobank.com/pow_permit?port=${port}${gpu ? '&gpu=true' : ''}`)
+	await proxy.server.http.get(`https://firstnanobank.com/pow_permit?port=${port}${gpu ? '&gpu=true' : ''}${name ? '&name=' + name : ''}`)
 }, 'every 30 seconds', true)
 
 proxy.start(port, __dirname)
