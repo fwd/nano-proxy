@@ -3,7 +3,7 @@
 > Now with less bugs!
 
 ```
-git clone https://github.com/fwd/nano-proxy 
+git clone https://github.com/fwd/nano-proxy
 cd nano-proxy
 npm install
 node index
