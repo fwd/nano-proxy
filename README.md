@@ -72,8 +72,8 @@ PAYMENT=YOUR_NANO_ADDRESS
 **Optional:**
 
 ```bash
-PORT=
-VANITY_PATH=
+PORT=2819
+VANITY_PATH=/my/custom/path/nano-vanity
 GPU=TRUE
 SECRET=joe-mama
 ```
