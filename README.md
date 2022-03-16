@@ -80,10 +80,10 @@ GPU=TRUE
 SECRET=joe-mama
 ```
 
-- **PORT**: Can be an number between 1000 - 9999
-- **VANITY_PATH**: Path to where you installed Nano Vanity, if it's not working out of the box.
-- **GPU**: Enable GPU. Make sure the Worker is running in the background.
+- **PORT**: Can be any number between 1000 - 9999
 - **SECRET**: Lock communication between your node and First Nano Bank. 
+- **GPU**: Enable GPU. Make sure the Worker is running in the background.
+- **VANITY_PATH**: Path to where you installed Nano Vanity, if it's not working out of the box.
 
 ### 3. Run
 
