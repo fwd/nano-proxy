@@ -8,7 +8,7 @@
 
 ```bash
 # OpenCL
-sudo apt install ocl-icd-opencl-dev 
+sudo apt install ocl-icd-opencl-dev  -y
 
 # Rust
 curl https://sh.rustup.rs -sSf | sh
