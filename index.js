@@ -3,6 +3,8 @@ const proxy = require('@fwd/api')
 
 require('dotenv').config()
 
+let busy = false
+
 const secret = process.env.SECRET || null
 const name = process.env.NAME || null
 const gpu = process.env.GPU || false
@@ -18,7 +20,11 @@ proxy.add([
 		action: (req) => {
 			return new Promise(async (resolve, reject) => {
 
+				if (busy) return resolve({ _raw: "Busy" })
+
 				var count = []
+
+				busy = true
 
 				for (var i in _.range(0, req.query.count || 1)) {
 					var string = req.query.string[0] == '1' ? req.query.string : '1' + req.query.string
@@ -30,8 +36,10 @@ proxy.add([
 						public: output.split(' ')[1].split('\n')[0]
 					})
 				}
-				
+
 				resolve({ _raw: count })
+				
+				busy = false
 			
 			})
 		}
@@ -41,6 +49,8 @@ proxy.add([
 		path: '/work_generate',
 		action: (req) => {
 			return new Promise(async (resolve, reject) => {
+
+				if (busy) return resolve({ _raw: "Busy" })
 
 				var account = req.query.address || req.query.account
 				var frontier = req.query.frontier || req.query.frontier
@@ -68,9 +78,13 @@ proxy.add([
 
 				_job.difficulty = req.query.difficulty || default_difficulty
 
+				busy = true
+
 				var proof = (await proxy.server.http.post('http://[::1]:7076', _job)).data
 
 				resolve({ _raw: proof })
+
+				busy = false
 			
 			})
 		}
