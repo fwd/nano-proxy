@@ -1,6 +1,6 @@
-<h1 align="center">Nano Node Proxy</h1>
+<h1 align="center">Nano PoW Worker w/ Proxy</h1>
 
-> Now with less bugs!
+> Make 0.01/NANO per PoW, by selling your GPU compute power. 
 
 ## 0. Pre-requisites
 
