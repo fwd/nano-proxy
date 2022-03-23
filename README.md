@@ -48,11 +48,11 @@ cd nano-work-server
 cargo build --release
 ```
 
-## 2. Install [PoW Proxy](https://github.com/fwd/nano-proxy)
+## 2. Install [PoW Proxy](https://github.com/fwd/nano-pow-worker)
 
 ```bash
-git clone https://github.com/fwd/nano-proxy
-cd nano-proxy
+git clone https://github.com/fwd/nano-pow-worker
+cd nano-pow-worker
 npm install
 ```
 
@@ -101,7 +101,7 @@ If you see ```http://localhost:[PORT]``` printed on the screen. All is well.
 
 ```bash
 npm install -g pm2
-pm2 start index.js --name nano-proxy
+pm2 start index.js --name nano-pow-worker
 pm2 startup
 pm2 save
 ```
