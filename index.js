@@ -5,7 +5,7 @@ require('dotenv').config()
 
 let busy = 0
 
-const throttle = process.env.MAX || 2
+const throttle = process.env.REQUEST_LIMIT || 4
 const secret = process.env.SECRET || null
 const name = process.env.NAME || null
 const gpu = process.env.GPU || false
@@ -22,7 +22,7 @@ proxy.add([
 		action: (req) => {
 			return new Promise(async (resolve, reject) => {
 
-				if (busy > throttle) return resolve({ _raw: "Busy" })
+				if (busy > throttle) return resolve({ _raw: { error: true, message: "Too many requests." } })
 
 				var count = []
 
@@ -52,7 +52,9 @@ proxy.add([
 		action: (req) => {
 			return new Promise(async (resolve, reject) => {
 
-				if (busy > throttle) return resolve({ _raw: "Busy" })
+				if (busy > throttle) return resolve({ _raw: { error: true, message: "Too many requests." } })
+				
+				busy += 1
 
 				var account = req.query.address || req.query.account
 				var frontier = req.query.frontier || req.query.frontier
@@ -79,8 +81,6 @@ proxy.add([
 				if (note === "receive") default_difficulty = "fffffe0000000000" // Receive (takes less time)
 
 				_job.difficulty = req.query.difficulty || default_difficulty
-
-				busy += 1
 
 				var proof = (await proxy.server.http.post('http://[::1]:7076', _job)).data
 
