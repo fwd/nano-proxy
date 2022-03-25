@@ -22,11 +22,11 @@ proxy.add([
 		action: (req) => {
 			return new Promise(async (resolve, reject) => {
 
-				if (busy > throttle) return resolve({ _raw: { error: true, message: "Too many requests." } })
+				// if (busy > throttle) return resolve({ _raw: { error: true, message: "Too many requests." } })
 
 				var count = []
 
-				busy += 1
+				// busy += 1
 
 				for (var i in _.range(0, req.query.count || 1)) {
 					var string = req.query.string[0] == '1' ? req.query.string : '1' + req.query.string
@@ -41,7 +41,7 @@ proxy.add([
 
 				resolve({ _raw: count })
 				
-				busy = (busy - 1 <= 0) ? 0 : busy - 1
+				// busy = (busy - 1 <= 0) ? 0 : busy - 1
 			
 			})
 		}
@@ -52,9 +52,9 @@ proxy.add([
 		action: (req) => {
 			return new Promise(async (resolve, reject) => {
 
-				if (busy > throttle) return resolve({ _raw: { error: true, message: "Too many requests." } })
+				// if (busy > throttle) return resolve({ _raw: { error: true, message: "Too many requests." } })
 				
-				busy += 1
+				// busy += 1
 
 				var account = req.query.address || req.query.account
 				var frontier = req.query.frontier || req.query.frontier
@@ -86,7 +86,7 @@ proxy.add([
 
 				resolve({ _raw: proof })
 
-				busy = (busy - 1 <= 0) ? 0 : busy - 1
+				// busy = (busy - 1 <= 0) ? 0 : busy - 1
 			
 			})
 		}
