@@ -2,6 +2,8 @@
 
 > Make 0.001/NANO per PoW, by selling your GPU compute power. 
 
+This project is in development by the team @ [Nano.to](https://nano.to)
+
 ## 0. Pre-requisites
 
 > Ubuntu (why would you use anything else? 💁🏽‍♂️)
