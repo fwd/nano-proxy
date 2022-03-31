@@ -1,6 +1,6 @@
-<h1 align="center">Nano PoW Worker w/ Proxy</h1>
+<h1 align="center">Nano PoW Proxy</h1>
 
-> Make 0.01/NANO per PoW, by selling your GPU compute power. 
+> Make 0.001/NANO per PoW, by selling your GPU compute power. 
 
 ## 0. Pre-requisites
 
@@ -51,6 +51,7 @@ cargo build --release
 ## 2. Install [PoW Proxy](https://github.com/fwd/nano-pow-worker)
 
 ```bash
+cd ../
 git clone https://github.com/fwd/nano-pow-worker
 cd nano-pow-worker
 npm install
