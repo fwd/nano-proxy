@@ -2,7 +2,7 @@
 
 > Make 0.001/NANO per PoW, by selling your GPU compute power. 
 
-This project is in development by the team @ [Nano.to](https://nano.to)
+This project is in development by the team @ [Nano.to](https://nano.to). Please contact us before setting up any PoW worker.
 
 ## 0. Pre-requisites
 
