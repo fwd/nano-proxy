@@ -26,6 +26,7 @@ cargo install nano-vanity
 ## 1. Install [PoW Worker](https://github.com/nanocurrency/nano-work-server)
 
 ```bash
+cd ~/
 git clone https://github.com/nanocurrency/nano-work-server.git
 cd nano-work-server
 cargo build --release
