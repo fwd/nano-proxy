@@ -31,7 +31,7 @@ cd nano-work-server
 cargo build --release
 ```
 
-## 1.1 **Setup Cron**
+**Setup Cron**
 
 ```bash
 # crontab -e
@@ -40,7 +40,7 @@ cargo build --release
 
 Adjut ```--cpu-threads``` to your needs.
 
-## 1.1 **With GPU**
+**With GPU**
 
 ```
 @reboot ~/nano-work-server/target/release/nano-work-server --gpu 0:0
