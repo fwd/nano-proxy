@@ -6,7 +6,7 @@ This project is in development by the team @ [Nano.to](https://nano.to). Please 
 
 ## 0. Pre-requisites
 
-> Ubuntu (why would you use anything else? 💁🏽‍♂️)
+> Ubuntu (Window & Mac (M1) coming soon)
 
 ```bash
 # OpenCL, GCC & Build Tools
