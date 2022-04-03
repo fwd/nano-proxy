@@ -53,7 +53,7 @@ Adjust ```--gpu``` to each local device id. Setting up GPUs on Linux is not easy
 ## 2. Install [PoW Proxy](https://github.com/fwd/nano-pow-worker)
 
 ```bash
-cd ../
+cd ~/
 git clone https://github.com/fwd/nano-pow-worker
 cd nano-pow-worker
 npm install
