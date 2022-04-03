@@ -48,12 +48,12 @@ Adjust ```--gpu``` to each local device id. Setting up GPUs on Linux is not easy
 
 ---
 
-## 2. Install [PoW Proxy](https://github.com/fwd/nano-pow-worker)
+## 2. Install [PoW Proxy](https://github.com/fwd/nano-pow-proxy)
 
 ```bash
 cd ~/
-git clone https://github.com/fwd/nano-pow-worker
-cd nano-pow-worker
+git clone https://github.com/fwd/nano-pow-proxy
+cd nano-pow-proxy
 npm install
 ```
 
@@ -102,7 +102,7 @@ If you see ```http://localhost:[PORT]``` printed on the screen. All is well.
 
 ```bash
 npm install -g pm2
-pm2 start index.js --name nano-pow-worker
+pm2 start index.js --name nano-pow-proxy
 pm2 startup
 pm2 save
 ```
