@@ -23,7 +23,15 @@ sudo apt install gcc -y
 cargo install nano-vanity
 ```
 
-**Setup Cron**
+## 1. Install [PoW Worker](https://github.com/nanocurrency/nano-work-server)
+
+```bash
+git clone https://github.com/nanocurrency/nano-work-server.git
+cd nano-work-server
+cargo build --release
+```
+
+## 1.1 **Setup Cron**
 
 ```bash
 # crontab -e
@@ -32,23 +40,15 @@ cargo install nano-vanity
 
 Adjut ```--cpu-threads``` to your needs.
 
-**With GPU**
+## 1.1 **With GPU**
 
 ```
 @reboot ~/nano-work-server/target/release/nano-work-server --gpu 0:0
 ```
 
-Adjut ```--gpu``` to each local device id. Good luck. It's a pain.
+Adjust ```--gpu``` to each local device id. Setting up GPUs on Linux is not easy. Don't feel bad if you struggle. 
 
 ---
-
-## 1. Install [PoW Worker](https://github.com/nanocurrency/nano-work-server)
-
-```bash
-git clone https://github.com/nanocurrency/nano-work-server.git
-cd nano-work-server
-cargo build --release
-```
 
 ## 2. Install [PoW Proxy](https://github.com/fwd/nano-pow-worker)
 
