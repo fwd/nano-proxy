@@ -66,9 +66,9 @@ Paste configs from below.
 
 **Required:**
 ```
-NAME=Esteban's GPU 💪🏽
+NAME=API_KEY
 PAYMENT=YOUR_NANO_ADDRESS
-SECRET=joe-mama
+GPU=TRUE
 ```
 
 Please change the ```SECRET``` to something long, and secure.
@@ -78,7 +78,6 @@ Please change the ```SECRET``` to something long, and secure.
 ```bash
 PORT=2819
 VANITY_PATH=/my/custom/path/nano-vanity
-GPU=TRUE
 ```
 
 - **PORT**: Can be any number between 1000 - 9999
