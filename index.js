@@ -18,43 +18,9 @@ const pow_marketplace_permit_interval = process.env.PERMIT_CHECK || false
 proxy.add([
 	{
 		method: 'get',
-		path: '/vanity_address',
-		action: (req) => {
-			return new Promise(async (resolve, reject) => {
-
-				// if (busy > throttle) return resolve({ _raw: { error: true, message: "Too many requests." } })
-
-				var count = []
-
-				// busy += 1
-
-				for (var i in _.range(0, req.query.count || 1)) {
-					var string = req.query.string[0] == '1' ? req.query.string : '1' + req.query.string
-					if (string.length > 6) return resolve({ error: 400, message: "Too long." })
-					var output = await proxy.server.exec(`${nano_vanity_path} ${req.query.string} --simple-output ${gpu ? '--gpu' : ''}`)
-					if (output.includes('failed')) return console.log(output)
-					count.push({
-						private: output.split(' ')[0],
-						public: output.split(' ')[1].split('\n')[0]
-					})
-				}
-
-				resolve({ _raw: count })
-				
-				// busy = (busy - 1 <= 0) ? 0 : busy - 1
-			
-			})
-		}
-	},
-	{
-		method: 'get',
 		path: '/work_generate',
 		action: (req) => {
 			return new Promise(async (resolve, reject) => {
-
-				// if (busy > throttle) return resolve({ _raw: { error: true, message: "Too many requests." } })
-				
-				// busy += 1
 
 				var account = req.query.address || req.query.account
 				var frontier = req.query.frontier || req.query.frontier
@@ -85,8 +51,6 @@ proxy.add([
 				var proof = (await proxy.server.http.post('http://[::1]:7076', _job)).data
 
 				resolve({ _raw: proof })
-
-				// busy = (busy - 1 <= 0) ? 0 : busy - 1
 			
 			})
 		}
