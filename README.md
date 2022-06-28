@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="https://github.com/fwd/nano-proxy/raw/master/.github/banner.png" alt="Prompts" width="500" />
+  <img src="https://github.com/fwd/n2/raw/master/.github/banner.png" alt="Prompts" width="500" />
 </p>
 
 
 <h2 align="center">Nano Node RPC Proxy</h2>
 
 
-![line](https://github.com/fwd/nano-proxy/raw/master/.github/line.png)
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 ## ❯ Install
 
 > **This software is in-development. Not ready for general use.**
 
-![line](https://github.com/fwd/nano-proxy/raw/master/.github/line.png)
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 ## ❯ Contributing
 
