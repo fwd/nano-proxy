@@ -1,6 +1,6 @@
 # OpenCL, GCC & Build Tools
-sudo apt install ocl-icd-opencl-dev gcc build-essential -y
-
+sudo apt install jq ocl-icd-opencl-dev gcc build-essential -y
 # Rust
 curl https://sh.rustup.rs -sSf | sh
+# Source
 source $HOME/.cargo/env

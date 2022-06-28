@@ -1,7 +1,8 @@
 {
   "private": true,
   "dependencies": {
-    "@fwd/api": "github:fwd/api",
+    "@dev-ptera/nano-node-rpc": "^2.0.2",
+    "@fwd/api": "*",
     "dotenv": "^16.0.0"
   }
 }
